@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script type="text/javascript">
+      const busInfo = [{
+        number: 'J14',
+        name: '103rd/Stony Island',
+        route: 'Southbound',
+        firstTime: '1 min',
+        secondTime: '17 min',
+        color: '15C226',
+      }, {
+        number: '60',
+        name: 'Randolh/Harbor Dr.',
+        route: 'Eastbound',
+        firstTime: '3 min',
+        secondTime: '23 min',
+        color: '1599C2',
+      }, {
+        number: '151',
+        name: 'Devon/Clark',
+        route: 'Northbound',
+        firstTime: '5 min',
+        secondTime: '21 min',
+        color: 'F4AC21',
+
+      }, {
+        number: '124',
+        name: 'Navy Pier',
+        route: 'Eastbound',
+        firstTime: '7 min',
+        secondTime: '27 min',
+        color: 'C21592',
+
+      }, {
+        number: '124',
+        name: 'Navy Pier',
+        route: 'Southbound',
+        firstTime: '10 min',
+        secondTime: '20 min',
+        color: 'C21592',
+
+      }, {
+        number: '4',
+        name: 'Cottage Grove',
+        route: 'Out of service',
+        firstTime: '12:10',
+        secondTime: 'am',
+        color: 'C21515',
+
+      }, {
+        number: '20',
+        name: 'Madison',
+        route: 'Out of service',
+        firstTime: '12:10',
+        secondTime: 'am',
+        color: '1531C2',
+
+      }, {
+        number: '157',
+        name: 'Streeteville/Taylor',
+        route: 'Out of service',
+        firstTime: '6:00',
+        secondTime: 'am',
+        color: '8115C2',
+
+      }, {
+        number: '6x',
+        name: 'Jackson Park Exp...',
+        route: 'Rerout',
+        firstTime: 'N/A',
+        color: 'C2B115',
+      }]
+
+      const htmlArray = busInfo.map(function(item) {
+        return `
+          <li>
+            <div class="bus-number-container">
+              <div style="background: ${item.color};" class="color-tag" />
+              <span>${item.number}</span>
+            </div>
+            <div class="bus-name">
+              <span>${item.name}</span>
+              <span>${item.route}</span>
+            </div>
+            <div class="bus-time">
+              <span>${item.firstTime}</span>
+              <span>${item.secondTime}</span>
+            </div>
+          </li>
+        `
+      })
+
+      $(document).ready(function() {
+        $('#list').html(htmlArray)
+      })
+
+    </script>
+  </head>
+  <body>
+    <div id="page-container">
+      <nav class="nav-bar">
+        <div class="nav-left">
+          <img src="images/left-arrow.svg" />
+          <img src="images/map.svg" />
+        </div>
+        <h1>Busy Bus</h1>
+        <div class="nav-right">
+          <img src="images/star.svg" />
+          <img src="images/hamburger-menu.svg" />
+        </div>
+      </nav>
+      <div class="header">
+        <h1 class="title">Bus Station</h1>
+      </div>
+      <div class="bus-station-header">
+        <h3 class="station-name">Washinton & State</h3>
+        <span class="station-number" >#5795</span>
+        <span class="line-count" >7 Lines</span>
+      </div>
+      <div class="arrivals-container">
+        <h2>Next Arrivals</h2>
+      </div>
+      <div class="col-headers">
+        <img src="images/bus-clock.svg" />
+      </div>
+      <div class="bus-list">
+        <ol id='list' />
+      </div>
+  </body>
+</html>
