@@ -1,6 +1,40 @@
 body {
   font-family: SF Pro Display;
 }
+
+.bus-60-color {
+  background: #1599C2;
+}
+
+.bus-124-color {
+  background: #C21592;
+}
+
+.bus-151-color {
+  background: #F4AC21;
+}
+
+.bus-J14-color {
+  background: #15C226;
+}
+
+.bus-4-color {
+  background: #C21515;
+}
+.bus-20-color {
+  background: #1531C2;
+}
+.bus-157-color {
+  background: #8115C2;
+}
+.bus-6x-color {
+  background: #C2B115;
+}
+
+
+
+
+
 #page-container {
   width: 375px;
   background: #FAFAFA;
@@ -92,7 +126,7 @@ li:last-child {
   border: 0;
 }
 
-li.disabled .bus-name span{
+li.disabled .bus-name span, li.disabled .bus-name h2{
   color: #979797;
 }
 

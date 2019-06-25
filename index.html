@@ -17,7 +17,6 @@
         route: 'Eastbound',
         firstTime: '3 min',
         secondTime: '23 min',
-        color: '1599C2',
         freq: 'Every 20 minutes'
       }, {
         number: '124',
@@ -25,7 +24,6 @@
         route: 'Southbound',
         firstTime: '5 min',
         secondTime: '20 min',
-        color: 'C21592',
         freq: 'Every 10 minutes'
 
       }, {
@@ -34,7 +32,6 @@
         route: 'Northbound',
         firstTime: '8 min',
         secondTime: '21 min',
-        color: 'F4AC21',
         freq: 'Every 16 minutes'
 
       }, {
@@ -43,7 +40,6 @@
         route: 'Southbound',
         firstTime: '9 min',
         secondTime: '17 min',
-        color: '15C226',
         freq: 'Every 15 minutes'
 
       }, {
@@ -52,7 +48,6 @@
         route: 'Eastbound',
         firstTime: '9 min',
         secondTime: '27 min',
-        color: 'C21592',
         freq: 'Every 10 minutes',
       }, {
         number: '4',
@@ -60,7 +55,6 @@
         route: 'Out of service',
         firstTime: '12:10am',
         secondTime: 'am',
-        color: 'C21515',
         disabled: true,
 
       }, {
@@ -69,7 +63,6 @@
         route: 'Out of service',
         firstTime: '12:10am',
         secondTime: 'am',
-        color: '1531C2',
         disabled: true,
 
       }, {
@@ -78,7 +71,6 @@
         route: 'Out of service',
         firstTime: '6:00am',
         secondTime: 'am',
-        color: '8115C2',
         disabled: true,
 
       }, {
@@ -87,18 +79,21 @@
         route: 'Rerout',
         firstTime: 'N/A',
         secondTime: '',
-        color: 'C2B115',
         disabled: true,
       }]
 
       const htmlArray = busInfo.map(function(item) {
+        let liClass = ''
+        if(item.disabled){
+          liClass = 'class="disabled"'
+        }
         return `
-          <li class="${item.disabled && 'disabled'}">
-            <div style="background: #${item.color};" class="bus-number-container">
+          <li ${liClass}>
+            <div class="bus-number-container bus-${item.number}-color">
               <span>${item.number}</span>
             </div>
             <div class="bus-name">
-              <span class='name'>${item.name}</span>
+              <h2 class='name'>${item.name}</h2>
               <span class='route'>${item.route}</span>
               ${ item.freq && `<span class='freq'>${item.freq}</span>` || ''}
             </div>
@@ -118,7 +113,7 @@
   <body>
     <div id="page-container">
       <div class='fixed'>
-        <img src="images/status-bar.svg" />  
+        <img src="images/status-bar.svg" />
         <nav class="nav-bar">
           <div class="nav-left">
             <img src="images/left-arrow.svg" />
