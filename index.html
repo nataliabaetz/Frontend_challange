@@ -89,17 +89,17 @@
         }
         return `
           <li ${liClass}>
-            <div class="bus-number-container bus-${item.number}-color">
-              <span>${item.number}</span>
-            </div>
-            <div class="bus-name">
+            <section class="bus-number-container">
+              ${item.number}
+            </section>
+            <section class="bus-name">
               <h2 class='name'>${item.name}</h2>
               <span class='route'>${item.route}</span>
               ${ item.freq && `<span class='freq'>${item.freq}</span>` || ''}
-            </div>
-            <div class="bus-time">
-              <span class='first'>${item.firstTime}</span>
-            </div>
+            </section>
+            <section class="bus-time">
+              ${item.firstTime}
+            </section>
           </li>
         `
       })
@@ -111,46 +111,39 @@
     </script>
   </head>
   <body>
-    <div id="page-container">
-      <div class='fixed'>
-        <img src="images/status-bar.svg" />
-        <nav class="nav-bar">
-          <div class="nav-left">
-            <img src="images/left-arrow.svg" />
-          </div>
-          <h1>Busy Bus</h1>
-          <div class="nav-right">
-            <img src="images/hamburger-menu.svg" />
-          </div>
-        </nav>
-        <div class="bus-station-header">
-          <h3 class="station-name">Washinton & State</h3>
-        </div>
-      </div>
-      <div class='scrollable'>
-        <div class="arrivals-container">
+    <main>
+      <section class='fixed'>
+        <section class='top'>
+          <img src="images/status-bar.svg" />
+          <nav class="nav-bar">
+            <section class="nav-left">
+              <img src="images/left-arrow.svg" />
+            </section>
+            <h1>Washington & State</h1>
+            <section class="nav-right">
+              <img src="images/hamburger-menu.svg" />
+            </section>
+          </nav>
+        </section>
+      </section>
+      <section class='scrollable'>
+        <section class="col-headers">
           <h2>Next Arrivals</h2>
-        </div>
-        <div class="col-headers">
           <img src="images/bus-clock.svg" />
-        </div>
-        <div class="bus-list">
-          <ol id='list' />
-        </div>
-      </div>
-      <div class='tab-bar'>
-        <div>
+        </section>
+        <ol id='list' />
+      </section>
+      <footer class='tab-bar'>
+        <section class='selected'>
           <img src="images/station.svg" />
-          <span>Stations</span>
-        </div>
-        <div>
-          <img src="images/star.svg" />
-          <span>Favorites</span>
-        </div>
-        <div>
-          <img src="images/bus.svg" />
-          <span>Bus Lines</span>
-        </div>
-      </div>
+        </section>
+        <section>
+          <img src="images/favorites.svg" />
+        </section>
+        <section>
+          <img src="images/bus-lines.svg" />
+        </section>
+      </footer>
+    </main>
   </body>
 </html>
