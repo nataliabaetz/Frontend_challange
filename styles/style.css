@@ -90,6 +90,10 @@ li.disabled .bus-time{
   color: #979797;
 }
 
+li.disabled  .bus-number-container {
+  background-color: #979797;
+}
+
 .bus-name {
   text-align: left;
   flex-grow: 1;
