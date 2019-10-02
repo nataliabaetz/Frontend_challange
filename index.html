@@ -1,149 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-      crossorigin="anonymous">
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <script type="text/javascript">
-      const busInfo = [{
-        number: '60',
-        name: 'Randolh/Harbor Dr.',
-        route: 'Eastbound',
-        firstTime: '3 min',
-        secondTime: '23 min',
-        freq: 'Every 20 minutes'
-      }, {
-        number: '124',
-        name: 'Navy Pier',
-        route: 'Southbound',
-        firstTime: '5 min',
-        secondTime: '20 min',
-        freq: 'Every 10 minutes'
-
-      }, {
-        number: '151',
-        name: 'Devon/Clark',
-        route: 'Northbound',
-        firstTime: '8 min',
-        secondTime: '21 min',
-        freq: 'Every 16 minutes'
-
-      }, {
-        number: 'J14',
-        name: '103rd/Stony Island',
-        route: 'Southbound',
-        firstTime: '9 min',
-        secondTime: '17 min',
-        freq: 'Every 15 minutes'
-
-      }, {
-        number: '124',
-        name: 'Navy Pier',
-        route: 'Eastbound',
-        firstTime: '9 min',
-        secondTime: '27 min',
-        freq: 'Every 10 minutes',
-      }, {
-        number: '4',
-        name: 'Cottage Grove',
-        route: 'Out of service',
-        firstTime: '12:10am',
-        secondTime: 'am',
-        disabled: true,
-
-      }, {
-        number: '20',
-        name: 'Madison',
-        route: 'Out of service',
-        firstTime: '12:10am',
-        secondTime: 'am',
-        disabled: true,
-
-      }, {
-        number: '157',
-        name: 'Streeteville/Taylor',
-        route: 'Out of service',
-        firstTime: '6:00am',
-        secondTime: 'am',
-        disabled: true,
-
-      }, {
-        number: '6x',
-        name: 'Jackson Park Express',
-        route: 'Rerout',
-        firstTime: 'N/A',
-        secondTime: '',
-        disabled: true,
-      }]
-
-      const htmlArray = busInfo.map(function(item) {
-        let liClass = ''
-        if(item.disabled){
-          liClass = 'class="disabled"'
-        }
-        return `
-          <li ${liClass}>
-            <section class="bus-number-container">
-              ${item.number}
-            </section>
-            <section class="bus-name">
-              <h2 class='name'>${item.name}</h2>
-              <span class='route'>${item.route}</span>
-              ${ item.freq && `<span class='freq'>${item.freq}</span>` || ''}
-            </section>
-            <section class="bus-time">
-              ${item.firstTime}
-            </section>
-          </li>
-        `
-      })
-
-      $(document).ready(function() {
-        $('#list').html(htmlArray)
-      })
-
-    </script>
+    <title>Portfolio | Natalia Baetz</title>
   </head>
   <body>
+    <header>
+      <h1> Natalia Baetz </h1> 
+      <p class="slogan"> UX/UI Designer </p>
+    </header>
     <main>
-      <section class='fixed'>
-        <section class='top'>
-          <img src="images/status-bar.svg" />
-          <nav class="nav-bar">
-            <section class="nav-left">
-              <img src="images/left-arrow.svg" />
-            </section>
-            <h1>Washington & State</h1>
-            <section class="nav-right">
-              <img src="images/hamburger-menu.svg" />
-            </section>
-          </nav>
-        </section>
-      </section>
-      <section class='scrollable'>
-        <section class="col-headers">
-          <h2>Next Arrivals</h2>
-          <img src="images/bus-clock.svg" />
-        </section>
-        <ol id='list' />
-      </section>
-      <footer class='tab-bar'>
-        <section class='selected'>
-          <img src="images/station.svg" />
-        </section>
-        <section>
-          <img src="images/favorites.svg" />
-        </section>
-        <section>
-          <img src="images/bus-lines.svg" />
-        </section>
-      </footer>
+      <div class="project featured-project">
+        <img src="http://lorempixel.com/350/260/abstract/placeholder-2" alt="project screenshot" />
+        <h2>Featured Project</h2>
+        <p>Project Description text</p>
+      </div>
+      <div class="project">
+        <img src="http://lorempixel.com/350/260/abstract/placeholder-3" alt="project screenshot" />
+        <h2>Project Name</h2>
+        <p>Project description text</p>
+      </div>
+      <div class="project"></div>
+        <img src="http://lorempixel.com/350/260/abstract/placeholder-4" alt="project screenshot"/>
+        <h2>Project Name</h2>
+        <p>Project description text</p>
+      </div>
     </main>
+    /<footer>
+      <ul>
+        <li> <a href="https://www.linkedin.com/in/natalia-baetz-101086/">LinkedIn</a></li>
+        <li> <a href="https://github.com/nataliabaetz">GitHub</a></li>
+        <li> <a href="https://www.facebook.com/natalia.deluna">Facebook</a></li>
+         <li> <a href="https://twitter.com/NataliaBaetz">Twitter</a></li>
+        <li> <a href="mailto: nataliabaetz@gmail.com">Email</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
