@@ -1,38 +1,44 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Portfolio | Natalia Baetz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src='scripts/importer.js'></script>
+  <link rel='stylesheet' type='text/css' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,300,500,700,800,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,500,700,800,900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <h1> Natalia Baetz </h1> 
-      <p class="slogan"> UX/UI Designer </p>
-    </header>
+  <body id='index'>
+    <header></header>
     <main>
-      <div class="project featured-project">
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-2" alt="project screenshot" />
-        <h2>Featured Project</h2>
-        <p>Project Description text</p>
-      </div>
-      <div class="project">
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-3" alt="project screenshot" />
-        <h2>Project Name</h2>
-        <p>Project description text</p>
-      </div>
-      <div class="project"></div>
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-4" alt="project screenshot"/>
-        <h2>Project Name</h2>
-        <p>Project description text</p>
-      </div>
+      <section id='hero'>
+        <div>
+          <h2>Hello!</h2>
+          <p>
+            My name is <strong>Natalia Baetz</strong>.  I'm a digital <strong>product designer</strong> based in San Fransico, and I'm passionate about <strong>making</strong> the world a <strong>better place</strong> through my work.
+          </p>
+        </div>
+        <a href='#projects'>
+          <img src='images/arrow_down.png' alt='down arrow'/>
+        </a>
+      </section>
+      <section id='projects'>
+        <ul>
+          <li id='mealPlan' class='caseStudy' data-name='Meal Plan' data-link='project.html'></li>
+          <li id='generic' class='caseStudy' data-name='Project Name' data-link='project.html'></li>
+        </ul>
+      </section>
+      <section id='contactMe'>
+        Let's chat <a href=''>Contact me!</a>
+      </section>
     </main>
-    <footer>
-      <ul>
-        <li> <a href="https://www.linkedin.com/in/natalia-baetz-101086/">LinkedIn</a></li>
-        <li> <a href="https://github.com/nataliabaetz">GitHub</a></li>
-        <li> <a href="https://www.facebook.com/natalia.deluna">Facebook</a></li>
-         <li> <a href="https://twitter.com/NataliaBaetz">Twitter</a></li>
-        <li> <a href="mailto: nataliabaetz@gmail.com">Email</a></li>
-      </ul>
-    </footer>
+    <footer></footer>
   </body>
 </html>
