@@ -2,6 +2,7 @@
 body {
   font-family: Gothic A1;
   position: relative;
+  padding-top: 82px;
 }
 
 body:after {
@@ -125,6 +126,10 @@ header nav {
   display: flex;
   justify-content: space-between;
   padding: 17px;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  top: 0px;
 }
 header nav img {
   height: 30px;
@@ -1321,7 +1326,7 @@ footer span {
   }
 }
 .conclusion {
-  margin-bottom: 10px;
+  margin-bottom: 120px;
   margin-top: 81px;
 }
 .conclusion .subHeader p {
